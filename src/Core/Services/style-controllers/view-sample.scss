@@ -1,0 +1,28 @@
+.view-sample {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1, h2, h3 {
+    color: $one;
+    margin-bottom: 20px;
+  }
+
+  pre {
+    background-color: rgba($two, .5);
+    color: $black;
+    font-family: 'Source Code Pro', monospace;
+    padding: 5px;
+    border: 1px solid rgba($black, .2);
+  }
+
+  p {
+    margin-top: 0;
+  }
+  i {
+    margin-top: 20px;
+  }
+}

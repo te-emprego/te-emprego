@@ -1,0 +1,34 @@
+@for $i from 1 through 5 {
+  .px-#{$i} {
+    padding: 0 #{$i}em;
+  }
+}
+
+/**
+ * Margin controller
+ */
+@for $i from 1 through 5 {
+  .mx-#{$i} {
+    margin: 0 #{$i}0px;
+  }
+}
+@for $i from 1 through 5 {
+  .mr-#{$i} {
+    margin-right: #{$i}0px;
+  }
+}
+@for $i from 1 through 5 {
+  .ml-#{$i} {
+    margin-left: #{$i}0px;
+  }
+}
+@for $i from 1 through 5 {
+  .mt-#{$i} {
+    margin-top: #{$i}0px;
+  }
+}
+@for $i from 1 through 5 {
+  .mb-#{$i} {
+    margin-bottom: #{$i}0px;
+  }
+}
