@@ -7,7 +7,8 @@
         <router-view></router-view>
       </transition>
     </v-content>
-    <Footer/>
+    <Chat/>
+    <!-- <Footer/> -->
   </v-app>
 </template>
 
@@ -15,6 +16,7 @@
 import Drawer from 'Components/UI/Drawer';
 import Toolbar from 'Components/UI/Toolbar';
 import Footer from 'Components/UI/Footer';
+import Chat from 'Components/Chat';
 
 export default {
   name: 'DefaultLayout',
@@ -23,6 +25,7 @@ export default {
     Drawer,
     Toolbar,
     Footer,
+    Chat,
   },
 
   computed: {

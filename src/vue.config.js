@@ -9,11 +9,13 @@ import Router from 'Core/Router';
 import Helpers from 'Core/Services/Helpers';
 import VueMask from 'v-mask';
 import vClickOutside from 'v-click-outside';
+import Affix from 'vue-affix';
 
 Vue.prototype.$http = Http;
 Vue.prototype.$store = Store;
 Vue.prototype.$helpers = Helpers;
 
+Vue.use(Affix);
 Vue.use(Vuetify, {
   theme: {
     primary: '#673ab7',

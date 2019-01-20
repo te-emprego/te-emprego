@@ -1,27 +1,37 @@
-# hparq
+# Te Emprego
 
-O hparq é uma estrutura exclusiva e de fácil entendimento para a criação de aplicações administrativas com Vue.js. Ele conta com uma CLI integrada, uma estrutura simples e aceita qualquer UI Component plugin.
+O **Te Emprego** é um projeto criado por [@danielbonifacio](https://github.com/danielbonifacio) que consiste em uma plataforma **100% gratuita** e funcional para a procura e divulgação de qualquer tipo de emprego/serviço.
+
+## Knowledge necessário para contribuir
+
+- ES6
+- Vue
+- Vuetify
+- AirBnb Style Guide
+
+Não pretende suportar IE (nenhuma versão).
+
+## Estrutura
+
+Este projeto foi construído em cima de uma estrutura privada do autor, chamada "hparq", caso você encontre alguma referência na documentação, se refere à estrutura e a interface de linha de comando (CLI).
 
 ## Rodando
 
-Você deve ter as persmissões de visualização do repositório danielbonifacio/hparq
-
 ``` shell
-# clona o repositório no dir meu-projeto
-git clone https://github.com/danielbonifacio/hparq ./meu-projeto
+# clona o repositório
+git clone https://github.com/danielbonifacio/te-emprego
 
 # navega até a pasta
-cd meu-projeto
+cd te-emprego
 
 # instala as dependências
 npm install
 
 # inicia o dev server
 npm run dev
-
-# empacota para produção
-npm run build
 ```
+
+Este projeto
 
 ## CLI
 
@@ -97,6 +107,7 @@ O hparq usa as CDNs do font-awesome e material design icons.
 O hparq usa, também, o linting do AirBnb (airbnb-base) e Vue (vue-essential) como padrão de linting de código, com algumas customizações:
 
 ```javascript
+'linebreak-style': 'off',
 'no-console': isProd ? 'error' : 'off',
 'no-alert': isProd ? 'error' : 'off',
 'no-unused-expressions': 'off',
@@ -185,8 +196,3 @@ Você pode criar novos e visualizar todos os helpers em `Core/Services/Helpers.j
 
 *Caso tenha criado algum Helper que possa ser útil para o time, faça um Pull Request.*
 
-## Componentes
-
-A ideia inicial do hparq era trazer, também, uma série de UI Components padrão. Isso fugiu do escopo da proposta, e decidimos trazer, por padrão, uma lib externa de UI Components (Ant Design Vue).
-
-[Aqui](https://vuecomponent.github.io/ant-design-vue/docs/vue/introduce/) você encontra sua documentação.

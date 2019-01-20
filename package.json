@@ -1,5 +1,5 @@
 {
-  "name": "teste-vue",
+  "name": "te-emprego-front",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "danielbonifacio@outlook.com",
@@ -25,8 +25,11 @@
     "typescript": "^3.2.2",
     "v-click-outside": "^2.0.1",
     "v-mask": "^1.3.3",
+    "v-money": "^0.8.1",
     "vue": "^2.5.21",
+    "vue-affix": "^0.4.0",
     "vue-router": "^3.0.1",
+    "vue-sticky": "^3.3.4",
     "vuetify": "^1.3.14",
     "vuex": "^3.0.1"
   },
