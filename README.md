@@ -169,7 +169,7 @@ Não importe extensões em arquivos `.vue` e `.js`
 Dentro da instância do vue, você já tem acesso à alguns *helpers* através de `$helpers`.
 
 ``` vue
-<tempalte>
+<template>
   <Input
     v-model="inputs.telefone"
     :mask="$helpers.mask.mobile(telefone)"
