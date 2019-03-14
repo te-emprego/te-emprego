@@ -18,7 +18,7 @@
  */
 
 // Importa o Core do Lummi
-require('./Internal/Lummi');
+require('./internal/Lummi');
 
 /**
  * Importa a função e executa ela automaticamente
@@ -30,7 +30,7 @@ require('./Internal/Lummi');
  * @param  {...any} args Argumentos que serão passados para a função a ser executada
  */
 const run = (module, ...args) =>
-  require(`./Internal/Lummi/${module}`)(...args);
+  require(`./internal/Lummi/${module}`)(...args);
 
 
 /**
