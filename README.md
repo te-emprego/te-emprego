@@ -1,198 +1,68 @@
-# Te Emprego
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-O **Te Emprego** é um projeto criado por [@danielbonifacio](https://github.com/danielbonifacio) que consiste em uma plataforma **100% gratuita** e funcional para a procura e divulgação de qualquer tipo de emprego/serviço.
+## Available Scripts
 
-## Knowledge necessário para contribuir
+In the project directory, you can run:
 
-- ES6
-- Vue
-- Vuetify
-- AirBnb Style Guide
+### `npm start`
 
-Não pretende suportar IE (nenhuma versão).
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Estrutura
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
-Este projeto foi construído em cima de uma estrutura privada do autor, chamada "hparq", caso você encontre alguma referência na documentação, se refere à estrutura e a interface de linha de comando (CLI).
+### `npm test`
 
-## Rodando
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-``` shell
-# clona o repositório
-git clone https://github.com/danielbonifacio/te-emprego
+### `npm run build`
 
-# navega até a pasta
-cd te-emprego
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-# instala as dependências
-npm install
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
 
-# inicia o dev server
-npm run dev
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Este projeto
+### `npm run eject`
 
-## CLI
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-O hparq conta com uma CLI integrada (lummi.js na raiz do projeto) que vai te ajudar a realizar tarefas com mais eficiência e padronização.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### Components
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-Criar componentes com a Lummi é muito simples:
-```
-node lummi component:make nested/byNamespace/component
-```
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-Esse comando irá criar este arquivo:
-``` vue
-<template>
-  <div id="nested-bynamespace-component">
-    Component
-  </div>
-</template>
+## Learn More
 
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-<script>
-export default {
-  name: 'Component',
-};
-</script>
+To learn React, check out the [React documentation](https://reactjs.org/).
 
+### Code Splitting
 
-<style lang="scss">
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-</style>
-```
+### Analyzing the Bundle Size
 
-em `src/Components/Nested/ByNamespace/Component.vue`.
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-Repare que é possivel aninhar componentes em diretórios (pense como namespaces), e o Lummi irá criá-los para você mesmo que não existam.
+### Making a Progressive Web App
 
-#### API
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-|flag||
-|---|-|
-|--no-sass| Remove o `lang='scss'` do template|
+### Advanced Configuration
 
-### Views
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-A estrutura de views mudou, por conta de uma necessidade de mudar de CommonJS para JSON o map das rotas.
+### Deployment
 
-Isso fez com que o comando de criação de views se tornasse mais verboso que o manual, visto que é muito mais simples manipular o JSON que responder à uma série de perguntas.
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-A manipulação pode ocorrer no `Core/Router/experimental/map.json`.
+### `npm run build` fails to minify
 
-O namespace "experimental" irá ser suportado nas próximas versões do hparq, pois ainda não foram testados todos os casos de uso.
-
-## Layouts
-
-Layouts são *wrappers* de Views. É convencionado em frameworks como Laravel, que uma view extende um layout, mas, na metodologia de componentes, uma view é englobada por um layout.
-
-```
-+--------------+
-| Layout       |
-| +----------+ |
-| |   View   | |
-| +----------+ |
-+--------------+
-```
-
-## Ícones
-
-O hparq usa as CDNs do font-awesome e material design icons.
-
-## Linting
-
-O hparq usa, também, o linting do AirBnb (airbnb-base) e Vue (vue-essential) como padrão de linting de código, com algumas customizações:
-
-```javascript
-'linebreak-style': 'off',
-'no-console': isProd ? 'error' : 'off',
-'no-alert': isProd ? 'error' : 'off',
-'no-unused-expressions': 'off',
-'array-callback-return': 'off',
-'no-nested-ternary': 'off',
-'prefer-template': 'off',
-'curly': 'off',
-'max-len': 'off',
-```
-
-Você configura o Linting em `/.eslintrs.js` e `/.eslingignore`.
-
-## Estrutura
-
-A estrutura do hparq é auto explicativa
-
-```
-+ src
-  + Components
-  + Config
-  + Core
-  + Layouts
-  + Views
-```
-
-O que pode te confundir, talvez, são os diretórios `Core` e `Config`.
-
-Core é o cara que contem todos os métodos e controladores que são essenciais para o funcionamento da aplicação, como Controller de requisições HTTP, rotas, state (flux) e serviços (Token, helpers, etc.).
-
-Config é quem armazena todas as configurações da aplicação.
-
-Como se trata de uma arquitetura inteiramente front-end, você pode encontrar arquivos arquivo .scss nesses diretórios, e está tudo bem com isso. São configurações e helpers de CSS.
-
-
-## Importando
-
-Quando você precisar importar um componente, use namespaces que o hparq já definiu para você.
-
-``` javascript
-// importando um componente
-import Component from 'Components/Testing/Components';
-
-// importando uma view
-import View from 'Views/View';
-
-// importando um layoyt
-import Layout from 'Layouts/Layout';
-
-// importando uma configuração específica
-import { Custom } from 'Config';
-//ou
-import Custom from 'Config/Custom';
-```
-
-Não importe extensões em arquivos `.vue` e `.js`
-
-## Helpers
-
-Dentro da instância do vue, você já tem acesso à alguns *helpers* através de `$helpers`.
-
-``` vue
-<template>
-  <Input
-    v-model="inputs.telefone"
-    :mask="$helpers.mask.mobile(telefone)"
-    label="Telefone"
-    tip="telefone ou celular"
-    placeholder="Ex: (27) 99876-5432"
-  />
-</template>
-
-<script>
-export default {
-  name: 'Custom Input',
-
-  data: () => ({
-    telefone: '',
-  }),
-};
-</script>
-```
-
-No exemplo acima, o helper de mascara para telefone foi utilizado. Ele retorna uma máscara dinâmica pronta para o nono dígito de acordo com a quantidade de caracteres que o argumento passado tem.
-
-Você pode criar novos e visualizar todos os helpers em `Core/Services/Helpers.js`.
-
-*Caso tenha criado algum Helper que possa ser útil para o time, faça um Pull Request.*
-
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
