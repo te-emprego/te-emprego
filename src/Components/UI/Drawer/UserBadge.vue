@@ -22,15 +22,14 @@
 
 <script>
 export default {
+  computed: {
+    user() {
+      return this.$store.getters['User/All'];
+    },
+  },
   data() {
     return {
       avatarSize: 48,
-      title: 'Avatar',
-      user: {
-        name: 'Daniel Bonifacio de Oliveira',
-        status: 'online',
-        avatar: '//gravatar.com/avatar/1419a379c561c42cbdd9e82d064363a6?s=48',
-      },
     };
   },
 };
