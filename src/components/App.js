@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Header from './Header'
+import Header from './Header/Header.component'
 import background from '../images/background.svg'
 import Container from './Container'
 import Main from './Main'
