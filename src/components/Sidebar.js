@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import WidgetWrapper from './WidgetWrapper'
 import styled from 'styled-components'
-import TogglabeButton from './TogglableButton'
+import TogglabeButton from './TogglableButton/TogglableButton.component'
 
 const FiltersWrapper = styled(WidgetWrapper)`
   height: 400px;
@@ -52,7 +52,7 @@ class Sidebar extends Component {
           <Block>
             Tipo de contratação:
             <ButtonsWrapper>
-              <TogglabeButton text="PJ" value={this.state.filtes.pj} changeValue={this.changeValue} />
+              <TogglabeButton text="PJ" value={this.state.filtes.pj} changeValue={this.changeValue}/>
               <TogglabeButton text="CLT" value={this.state.filtes.clt} changeValue={this.changeValue} />
               <TogglabeButton text="Estágio" value={this.state.filtes.estagio} changeValue={this.changeValue} />
               <TogglabeButton text="Freelance" value={this.state.filtes.freelance} changeValue={this.changeValue} />
@@ -62,9 +62,9 @@ class Sidebar extends Component {
           <Block>
             Nível de experiência:
             <ButtonsWrapper>
-              <TogglabeButton text="Júnior"/>
-              <TogglabeButton text="Pleno"/>
-              <TogglabeButton text="Sênior"/>
+              <TogglabeButton text="Júnior" changeValue={this.changeValue}/>
+              <TogglabeButton text="Pleno" changeValue={this.changeValue}/>
+              <TogglabeButton text="Sênior" changeValue={this.changeValue}/>
             </ButtonsWrapper>
           </Block>
         </FiltersWrapper>
