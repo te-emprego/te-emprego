@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import MaterialIcon from 'material-icons-react'
-import JobDescription from './JobDescription'
+import JobDescription from './JobDescription/JobDescription.component'
 
 const Job = styled.div`
   padding: 20px;
