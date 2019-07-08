@@ -4,7 +4,7 @@ import Header from './Header/Header.component'
 import background from '../images/background.svg'
 import Container from './Container'
 import Main from './Main'
-import Sidebar from './Sidebar'
+import Sidebar from './Sidebar/Sidebar.component'
 import Jobs from './Jobs'
 
 const Root = styled.div`
