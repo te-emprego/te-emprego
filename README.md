@@ -14,6 +14,32 @@ O Te Emprego é um projeto criado por [@danielbonifacio](https://github.com/dani
 
 Não pretende dar suporte a Internet Explorer, independente da versão.
 
+
+## Design
+
+Abaixo algumas especificações de design.
+
+Download do pacote de identidade visual em [pdf](https://drive.google.com/file/d/1Hc_DwuXGZIO7QdTtIdpkkE44ePuV94EC) ou [ai](https://drive.google.com/file/d/14LyWz_82Ia-OMBhrRz3X-ap6vE7LEZfE)
+
+### Cores
+- Primaria: `#673AB7` (available at: `config.colors.primary`)
+- Texto escuro: `#646464` (available at: `config.colors.darkText`)
+- Texto claro: `#707070` (available at: `config.colors.lightText`)
+- Branco: `#707070` (available at: `config.colors.white`)
+
+### Espaçamentos
+
+Espaçamentos por escala:
+
+1. `20px` (default)
+2. `40px`
+3. `60px`
+
+### Raio de borda
+
+1. `10px` (default)
+2. `5px`
+
 ---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
