@@ -32,6 +32,19 @@ const Block = styled.div`
 `
 
 class Sidebar extends Component {
+  state = {
+    filtes: {
+      pj: true,
+      clt: true,
+      estagio: true,
+      freelance: true
+    }
+  }
+
+  changeValue = (value) => {
+    console.log(value)
+  }
+
   render() {
     return(
       <SidebarWrapper>
@@ -39,10 +52,10 @@ class Sidebar extends Component {
           <Block>
             Tipo de contratação:
             <ButtonsWrapper>
-              <TogglabeButton text="PJ"/>
-              <TogglabeButton text="CLT"/>
-              <TogglabeButton text="Estágio"/>
-              <TogglabeButton text="Freelance"/>
+              <TogglabeButton text="PJ" value={this.state.filtes.pj} changeValue={this.changeValue} />
+              <TogglabeButton text="CLT" value={this.state.filtes.clt} changeValue={this.changeValue} />
+              <TogglabeButton text="Estágio" value={this.state.filtes.estagio} changeValue={this.changeValue} />
+              <TogglabeButton text="Freelance" value={this.state.filtes.freelance} changeValue={this.changeValue} />
             </ButtonsWrapper>
           </Block>
 

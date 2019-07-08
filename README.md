@@ -1,3 +1,21 @@
+# ![Te Emprego](https://i.imgur.com/WLg3n6g.png)
+
+![](https://img.shields.io/david/te-emprego/te-emprego.svg?style=flat-square&logo=npm&color=561EBB&labelColor=222222)
+![](https://img.shields.io/github/languages/code-size/te-emprego/te-emprego.svg?style=flat-square&logo=javascript&color=561EBB&labelColor=222222)
+![](https://img.shields.io/github/followers/danielbonifacio.svg?label=Follow&style=social&link=http://github.com/danielbonifacio)
+
+O Te Emprego é um projeto criado por [@danielbonifacio](https://github.com/danielbonifacio) que consiste em uma plataforma 100% gratuita e funcional para a procura e divulgação de qualquer tipo de emprego/serviço.
+
+## Knowledge necessário para contribuir
+
+- ES6
+- React
+- Styled Components
+
+Não pretende dar suporte a Internet Explorer, independente da versão.
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

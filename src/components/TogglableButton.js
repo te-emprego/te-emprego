@@ -28,22 +28,29 @@ const Button = styled.button`
 
 class TogglableButton extends React.Component {
   state = {
-    active: true
+    active: this.props.value || false
   }
 
   _handleClick = () => {
     this.setState({
       active: !this.state.active
     })
+    this.emitValue()
+  }
+
+  emitValue = () => {
+    console.log(this.props);
+    this.props.changeValue(this.aaaa)
   }
 
   render() {
+    const { value, text } = this.props
     return (
       <Button
         onClick={this._handleClick}
-        className={this.state.active ? 'active' : 'inactive'}
+        className={value ? 'active' : 'inactive'}
       >
-        { this.props.text }
+        { text }
       </Button>
     )
   }
