@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Header from './Header'
+import Header from './Header/Header.component'
 import background from '../images/background.svg'
-import Container from './Container'
-import Main from './Main'
-import Sidebar from './Sidebar'
-import Jobs from './Jobs'
+import Container from './Global/Container.style';
+import Main from './Global/Main.style';
+import Sidebar from './Sidebar/Sidebar.component'
+import JobList from './JobList/JobList.component';
 
 const Root = styled.div`
   transition: .25s ease;
@@ -34,7 +34,7 @@ class App extends Component {
         <Header />
         <MainContainer>
           <Main>
-            <Jobs/>
+            <JobList/>
           </Main>
           <Sidebar/>
         </MainContainer>
