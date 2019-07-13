@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from '../Container';
+import Container from '../Global/Container.style';
 import {
   Wrapper,
   Logo

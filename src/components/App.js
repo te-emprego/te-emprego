@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import Header from './Header/Header.component'
 import background from '../images/background.svg'
-import Container from './Container'
-import Main from './Main'
+import Container from './Global/Container.style';
+import Main from './Global/Main.style';
 import Sidebar from './Sidebar/Sidebar.component'
 import Jobs from './Jobs'
 

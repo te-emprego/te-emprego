@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import WidgetWrapper from '../WidgetWrapper';
+import WidgetWrapper from '../Global/WidgetWrapper.style';
 import { Button } from '../TogglableButton/TogglableButton.style';
 
 const FiltersWrapper = styled(WidgetWrapper)`
