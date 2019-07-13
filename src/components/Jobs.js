@@ -1,113 +1,5 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
-import MaterialIcon from 'material-icons-react'
-import JobDescription from './JobDescription/JobDescription.component'
-
-const Job = styled.div`
-  padding: 20px;
-  box-shadow: 0 3px 6px rgba(0,0,0,.16);
-  width: 100%;
-  border-radius: 10px;
-  position: relative;
-  display: flex;
-  transition: .25s ease;
-  min-height: 150px;
-
-  &:hover {
-    /* box-shadow: 0 10px 20px rgba(0,0,0,.16); */
-
-    .Features {
-      width: 230px;
-      /* padding-left: 35px; */
-    }
-  }
-
-  &:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
-  .Info {
-    width: 445px;
-
-    .InfoDescription {
-      font-size: 15px;
-      color: #707070;
-      line-height: 24px;
-      font-family: 'Nunito', sans-serif;
-    }
-
-    .InfoTitle {
-      font-size: 22px;
-      color: #646464;
-      font-weight: 800;
-      font-family: 'Nunito', sans-serif;
-      margin-bottom: 10px;
-    }
-  }
-
-  .Employer {
-    width: 180px;
-
-  }
-
-  .Features {
-    color: #FFFFFF;
-    background-color: #673AB7;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding: 15px 20px;
-    position: absolute;
-    height: 100%;
-    top: 0;
-    right: 0;
-    width: 215px;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
-    transition: .25s ease;
-   
-    .Feature {
-      width: 100%;
-
-      .Title {
-        font-size: 15px;
-        font-family: 'Raleway', sans-serif;
-      }
-      .Description {
-        font-size: 18px;
-        font-family: 'Raleway', sans-serif;
-        font-weight: 700;
-      }
-    }
-  }
-
-  .LowSalary {
-    position: relative;
-    right: 0px;
-    cursor: default;
-
-    .Activator:hover + .Span {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .Span {
-      width: 280px;
-      border-radius: 10px;
-      box-shadow: 0 3px 6px rgba(0,0,0,.16);
-      padding: 10px;
-      background-color: #FFFFFF;
-      z-index: 2;
-      position: absolute;
-      top: -100px;
-      left: calc(50% - 140px);
-      text-align: center;
-      opacity: 0;
-      visibility: hidden;
-      transition: .25s ease;
-    }
-  }
-`
+import Job from './Job/Job.component';
 
 const fakeStore = [
   {
@@ -292,72 +184,24 @@ const fakeStore = [
       name: 'Lorem',
     },
   },
-]
-
-const RemoteBadge = styled.div`
-  display: inline-block;
-  background-color: #ffffff;
-  color: #673AB7;
-  padding: 3px 5px;
-  border-radius: 5px;
-  font-weight: 700;
-  font-size: 15px;
-  user-select: none;
-`
-
-const LowSalary = () => (
-  <div className="LowSalary">
-    <div className="Activator">
-      <MaterialIcon icon="warning" color="#FF9F4B" size={25}/>
-    </div>
-    <div className="Span">
-      Esta vaga tem o salário abaixo da média para o regime de contratação.
-    </div>
-  </div>
-)
+];
 
 class Jobs extends Component {
   render() {
     return(
       <div>
         { fakeStore.map((job) => (
-          <Job key={job.info.id}>
-            <div className="Info">
-              <h2 className="InfoTitle">{job.info.title}</h2>
-              <p className="InfoDescription">
-                {job.info.description}
-              </p>
-            </div>
-    
-            <div className="Employer">
-              <JobDescription
-                employer={job.employer}
-                features={job.features}
-              />
-            </div>
-
-            { job.features.lowSalary && (<LowSalary />) }
-    
-            <div className="Features">
-              <div className="Feature">
-                <div className="Title">Período</div>
-                <div className="Description">{job.features.period}</div>
-              </div>
-              <div className="Feature">
-                <div className="Title">Tipo de contratação</div>
-                <div className="Description">{job.features.contract}</div>
-              </div>
-              <RemoteBadge>
-                <span>
-                  {
-                    job.features.remote === true
-                      ? (<span>Aceita remoto <MaterialIcon icon="thumb_up" size={15} color={'#673AB7'}/></span>)
-                      : (<span>Não aceita remoto</span>)
-                  }
-                </span>
-              </RemoteBadge>
-            </div>
-          </Job>
+          <Job 
+            key={job.info.id}
+            title={job.info.title}
+            description={job.info.description}
+            employer={job.employer}
+            features={job.features}
+            period={job.features.period}
+            contract={job.features.contract}
+            remote={job.features.remote}
+            lowSalary={job.features.lowSalary}
+          />
         ))}
       </div>
     )
