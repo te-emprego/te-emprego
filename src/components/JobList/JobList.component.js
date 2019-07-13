@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
-import Job from './Job/Job.component';
+import React from 'react';
+import Job from '../Job/Job.component';
+import { Wrapper } from './JobList.style';
 
-const fakeStore = [
+const FAKE_STORE = [
   {
     info: {
       id: '1',
@@ -186,26 +187,25 @@ const fakeStore = [
   },
 ];
 
-class Jobs extends Component {
-  render() {
-    return(
-      <div>
-        { fakeStore.map((job) => (
-          <Job 
-            key={job.info.id}
-            title={job.info.title}
-            description={job.info.description}
-            employer={job.employer}
-            features={job.features}
-            period={job.features.period}
-            contract={job.features.contract}
-            remote={job.features.remote}
-            lowSalary={job.features.lowSalary}
-          />
-        ))}
-      </div>
-    )
-  }
-}
+const JobList = () => {
 
-export default Jobs
+  return (
+    <Wrapper>
+      { FAKE_STORE.map((job) => (
+        <Job 
+          key={job.info.id}
+          title={job.info.title}
+          description={job.info.description}
+          employer={job.employer}
+          features={job.features}
+          period={job.features.period}
+          contract={job.features.contract}
+          remote={job.features.remote}
+          lowSalary={job.features.lowSalary}
+        />
+      ))}
+    </Wrapper>
+  );
+};
+
+export default JobList;
