@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import COLORS from '../../styles/colors';
+import COLORS from '../../globalStyles/colors';
 
 const Button = styled.button`
   border-radius: 10px;
