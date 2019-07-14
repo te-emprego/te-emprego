@@ -1,6 +1,12 @@
 import styled from 'styled-components';
-import WidgetWrapper from '../Global/WidgetWrapper.style';
-import { Button } from '../TogglableButton/TogglableButton.style';
+import { Button } from '../TogglableButton/styles';
+
+const WidgetWrapper = styled.div`
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  padding: 20px;
+`;
 
 const FiltersWrapper = styled(WidgetWrapper)`
   height: 400px;
@@ -9,12 +15,12 @@ const FiltersWrapper = styled(WidgetWrapper)`
   color: #646464;
   position: sticky;
   top: 30px;
-`
+`;
 
 const SidebarWrapper = styled.div``;
 
 const ButtonsWrapper = styled.div`
-  ${ Button } {
+  ${Button} {
     &:not(:last-child) {
       margin-top: 10px;
       margin-right: 5px;
@@ -22,7 +28,7 @@ const ButtonsWrapper = styled.div`
       margin-bottom: 7px;
     }
   }
-`
+`;
 
 const Block = styled.div`
   &:not(:last-child) {
@@ -30,9 +36,4 @@ const Block = styled.div`
   }
 `;
 
-export {
-  FiltersWrapper,
-  SidebarWrapper,
-  ButtonsWrapper,
-  Block
-};
+export { FiltersWrapper, SidebarWrapper, ButtonsWrapper, Block };
