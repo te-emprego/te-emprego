@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+
 import Main from './pages/main';
 
 import GlobalStyle from './globalStyles/global';
 
-const App = () => {
-  return (
-    <>
-      <GlobalStyle />
-      <Main />
-    </>
-  );
-};
+const App = () => (
+  <>
+    <GlobalStyle />
+    <Main />
+  </>
+);
 
 export default App;
