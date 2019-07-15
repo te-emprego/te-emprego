@@ -17,7 +17,7 @@ const CompanyLogo = styled.img`
   border-radius: 40px;
   width: 30px;
   height: 30px;
-  box-shadow: 0 1px 3px rgba(0,0,0,.55);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
 `;
 
 const CompanyName = styled.p`
@@ -57,5 +57,5 @@ export {
   FeaturesList,
   FeatureItem,
   FeatureIcon,
-  FeatureText
+  FeatureText,
 };

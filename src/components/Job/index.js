@@ -1,6 +1,6 @@
 import React from 'react';
 import MaterialIcon from 'material-icons-react';
-import JobDescription from '../JobDescription/JobDescription.component';
+import JobDescription from '../JobDescription';
 import {
   Wrapper,
   InfoContent,
@@ -14,8 +14,8 @@ import {
   RemoteBadge,
   LowSalaryText,
   LowSalaryIcon,
-  LowSalary
-} from './Job.style';
+  LowSalary,
+} from './styles';
 
 const Job = ({
   title,
@@ -25,9 +25,8 @@ const Job = ({
   period,
   contract,
   remote,
-  lowSalary
+  lowSalary,
 }) => {
-
   return (
     <Wrapper>
       <InfoContent>
@@ -35,20 +34,20 @@ const Job = ({
         <InfoDescription>{description}</InfoDescription>
       </InfoContent>
       <EmployerContent>
-        <JobDescription
-          employer={employer}
-          features={features}
-        />
+        <JobDescription employer={employer} features={features} />
       </EmployerContent>
 
-      { lowSalary && (
+      {lowSalary && (
         <LowSalary>
           <LowSalaryIcon>
-            <MaterialIcon icon="warning" color="#FF9F4B" size={25}/>
+            <MaterialIcon icon="warning" color="#FF9F4B" size={25} />
           </LowSalaryIcon>
-          <LowSalaryText>Esta vaga tem o salário abaixo da média para o regime de contratação.</LowSalaryText>
+          <LowSalaryText>
+            Esta vaga tem o salário abaixo da média para o regime de
+            contratação.
+          </LowSalaryText>
         </LowSalary>
-      ) }
+      )}
 
       <FeatureList>
         <Feature>
@@ -61,16 +60,19 @@ const Job = ({
         </Feature>
         <RemoteBadge>
           <span>
-            {
-              remote === true
-                ? (<span>Aceita remoto <MaterialIcon icon="thumb_up" size={15} color={'#673AB7'}/></span>)
-                : (<span>Não aceita remoto</span>)
-            }
+            {remote === true ? (
+              <span>
+                Aceita remoto{' '}
+                <MaterialIcon icon="thumb_up" size={15} color="#673AB7" />
+              </span>
+            ) : (
+              <span>Não aceita remoto</span>
+            )}
           </span>
         </RemoteBadge>
       </FeatureList>
     </Wrapper>
-  )
-}
+  );
+};
 
 export default Job;

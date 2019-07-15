@@ -24,8 +24,8 @@ const EmployerContent = styled.div`
 `;
 
 const FeatureList = styled.div`
-  color: #FFFFFF;
-  background-color: #673AB7;
+  color: #ffffff;
+  background-color: #673ab7;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 15px 20px;
@@ -37,7 +37,7 @@ const FeatureList = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
-  transition: .25s ease;
+  transition: 0.25s ease;
 `;
 
 const Feature = styled.div`
@@ -57,12 +57,12 @@ const FeatureDescription = styled.div`
 
 const Wrapper = styled.div`
   padding: 20px;
-  box-shadow: 0 3px 6px rgba(0,0,0,.16);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   width: 100%;
   border-radius: 10px;
   position: relative;
   display: flex;
-  transition: .25s ease;
+  transition: 0.25s ease;
   min-height: 150px;
 
   &:not(:last-child) {
@@ -70,8 +70,7 @@ const Wrapper = styled.div`
   }
 
   &:hover {
-
-    ${ FeatureList } {
+    ${FeatureList} {
       width: 230px;
     }
   }
@@ -80,7 +79,7 @@ const Wrapper = styled.div`
 const RemoteBadge = styled.div`
   display: inline-block;
   background-color: #ffffff;
-  color: #673AB7;
+  color: #673ab7;
   padding: 3px 5px;
   border-radius: 5px;
   font-weight: 700;
@@ -91,9 +90,9 @@ const RemoteBadge = styled.div`
 const LowSalaryText = styled.div`
   width: 280px;
   border-radius: 10px;
-  box-shadow: 0 3px 6px rgba(0,0,0,.16);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   padding: 10px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   z-index: 2;
   position: absolute;
   top: -100px;
@@ -101,12 +100,11 @@ const LowSalaryText = styled.div`
   text-align: center;
   opacity: 0;
   visibility: hidden;
-  transition: .25s ease;
+  transition: 0.25s ease;
 `;
 
 const LowSalaryIcon = styled.div`
-
-  &:hover + ${ LowSalaryText } {
+  &:hover + ${LowSalaryText} {
     opacity: 1;
     visibility: visible;
   }
@@ -131,5 +129,5 @@ export {
   RemoteBadge,
   LowSalaryText,
   LowSalaryIcon,
-  LowSalary
+  LowSalary,
 };

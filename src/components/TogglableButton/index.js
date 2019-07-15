@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Button } from './TogglableButton.style';
+import { Button } from './styles';
 
-const TogglableButton = ({text, changeValue, value}) => {
+const TogglableButton = ({ text, changeValue, value }) => {
   const [isActive, setActive] = useState(value);
 
   const emitValue = () => {
@@ -14,10 +14,9 @@ const TogglableButton = ({text, changeValue, value}) => {
   };
 
   return (
-    <Button 
-      isActive={ isActive }
-      onClick={() => _handleClick()}
-    >{ text }</Button>  
+    <Button isActive={isActive} onClick={() => _handleClick()}>
+      {text}
+    </Button>
   );
 };
 
