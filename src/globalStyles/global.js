@@ -14,6 +14,7 @@ export default createGlobalStyle`
   }
 
   body {
+    font-family: "Nunito", cursive, sans-serif;
     -webkit-font-smoothing: antialiased !important;
     transition: .25s ease;
     min-height: 100%;
