@@ -1,6 +1,12 @@
 import React from 'react';
 import MaterialIcon from 'material-icons-react';
-import colors from '../../globalStyles/colors';
+import colors from '@/globalStyles/colors';
+
+import logo from '@images/Logo.svg';
+import right from '@images/fx.svg';
+import bottom from '@images/fx_bottom.svg';
+import linkedin from '@images/linkedin.svg';
+import github from '@images/github.svg';
 
 import {
   Root,
@@ -10,12 +16,6 @@ import {
   SocialLinks,
   BottomEffect,
 } from './styles';
-import logo from '../../assets/images/Logo.svg';
-
-import right from '../../assets/images/fx.svg';
-import bottom from '../../assets/images/fx_bottom.svg';
-import linkedin from '../../assets/images/linkedin.svg';
-import github from '../../assets/images/github.svg';
 
 const Login = () => (
   <Root>

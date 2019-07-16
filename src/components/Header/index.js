@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Container, Logo, Wrapper } from './styles';
+import logo from '@images/Logo.svg';
 
-import logo from '../../assets/images/Logo.svg';
+import { Container, Logo, Wrapper } from './styles';
 
 const Header = () => (
   <Wrapper>

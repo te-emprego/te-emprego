@@ -1,9 +1,9 @@
 import React from 'react';
 
-// import Main from './pages/main';
-import Login from './pages/login';
+// import Main from '@pages/main';
+import Login from '@pages/login';
 
-import GlobalStyle from './globalStyles/global';
+import GlobalStyle from '@/globalStyles/global';
 
 const App = () => (
   <>

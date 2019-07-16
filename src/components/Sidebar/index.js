@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TogglableButton from '../TogglableButton';
+import TogglableButton from '@components/TogglableButton';
 import {
   FiltersWrapper,
   SidebarWrapper,
