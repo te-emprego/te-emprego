@@ -22,6 +22,10 @@ export const Root = styled.div`
 export const HeaderLogin = styled.div`
   padding: 100px 80px 20px 80px;
   text-align: left;
+
+  @media screen and (max-width: 748px) {
+    padding: 80px 25px 0;
+  }
 `;
 
 export const LoginForm = styled.div`
@@ -30,9 +34,13 @@ export const LoginForm = styled.div`
   text-align: center;
   margin-top: 50px;
 
+  @media screen and (max-width: 748px) {
+    margin-top: 0;
+  }
+
   h1,
   p {
-    text-shadow: 0 2px 5px ${colors.shadowText};
+    text-shadow: 0 3px 6px ${colors.shadowBox};
     color: ${colors.white};
   }
 
@@ -40,6 +48,7 @@ export const LoginForm = styled.div`
     text-transform: uppercase;
     font-size: 3rem;
     font-family: 'Raleway', sans-serif;
+    font-weight: 800;
   }
 
   a {
@@ -80,15 +89,13 @@ export const LoginForm = styled.div`
       font-size: 0.975rem;
       padding: 10px 20px;
       font-family: 'Nunito', sans-serif;
-      -webkit-box-shadow: 0px 2px 2px 0px ${colors.shadowBox};
-      -moz-box-shadow: 0px 2px 2px 0px ${colors.shadowBox};
-      box-shadow: 0px 2px 2px 0px ${colors.shadowBox};
+      box-shadow: 0px 3px 6px ${colors.shadowBox};
       display: flex;
       align-items: center;
       justify-content: center;
       vertical-align: middle;
       cursor: pointer;
-      color: #8f54f8;
+      color: ${colors.primary};
       transition: 0.3s ease;
 
       span {
@@ -104,6 +111,10 @@ export const SocialLinks = styled.div`
   display: flex;
   flex-direction: column;
   margin: 35px 0;
+
+  @media screen and (max-width: 748px) {
+    margin-bottom: 20px;
+  }
 
   p {
     color: ${colors.white};
@@ -128,12 +139,11 @@ export const SocialLinks = styled.div`
       background: ${colors.white};
       border-radius: 5px;
       cursor: pointer;
-      -webkit-box-shadow: 0px 2px 2px 0px ${colors.shadowBox};
-      -moz-box-shadow: 0px 2px 2px 0px ${colors.shadowBox};
-      box-shadow: 0px 2px 2px 0px ${colors.shadowBox};
+      box-shadow: 0px 3px 6px ${colors.shadowBox};
 
       span {
-        margin-left: 5px;
+        margin: 0 3px 0 5px;
+        color: ${colors.primary};
       }
     }
   }
@@ -155,5 +165,14 @@ export const BottomEffect = styled.div`
     position: absolute;
     bottom: 0;
     left: calc(50% - 250px);
+  }
+
+  @media screen and (max-width: 748px) {
+    img {
+      width: 280px;
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 140px);
+    }
   }
 `;
