@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import MaterialIcon from 'material-icons-react';
 import {
   Wrapper,
@@ -39,5 +40,20 @@ const JobDescription = ({ employer, features }) => (
     </FeaturesList>
   </Wrapper>
 );
+
+JobDescription.propTypes = {
+  employer: PropTypes.shape({
+    logo: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+  }).isRequired,
+  features: PropTypes.shape({
+    period: PropTypes.string.isRequired,
+    contract: PropTypes.string.isRequired,
+    remote: PropTypes.bool.isRequired,
+    salary: PropTypes.string.isRequired,
+    englishLevel: PropTypes.number.isRequired,
+    lowSalary: PropTypes.bool.isRequired,
+  }).isRequired,
+};
 
 export default JobDescription;

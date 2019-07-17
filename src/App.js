@@ -1,6 +1,7 @@
 import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-// import Main from '@pages/main';
+import Main from '@pages/main';
 import Login from '@pages/login';
 
 import GlobalStyle from '@/globalStyles/global';
@@ -8,11 +9,10 @@ import GlobalStyle from '@/globalStyles/global';
 const App = () => (
   <>
     <GlobalStyle />
-    {/*
-      Uncomment Main to see the main page
-      <Main />
-     */}
-    <Login />
+    <BrowserRouter>
+      <Route path="/" component={Main} exact />
+      <Route path="/login" component={Login} />
+    </BrowserRouter>
   </>
 );
 

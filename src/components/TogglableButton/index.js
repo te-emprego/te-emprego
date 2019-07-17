@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Button } from './styles';
 
 const TogglableButton = ({ text, changeValue, value }) => {
@@ -8,16 +9,22 @@ const TogglableButton = ({ text, changeValue, value }) => {
     changeValue(value || '');
   };
 
-  const _handleClick = () => {
+  const handleClick = () => {
     setActive(!isActive);
     emitValue();
   };
 
   return (
-    <Button isActive={isActive} onClick={() => _handleClick()}>
+    <Button isActive={isActive} onClick={() => handleClick()}>
       {text}
     </Button>
   );
+};
+
+TogglableButton.propTypes = {
+  text: PropTypes.string.isRequired,
+  changeValue: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
 };
 
 export default TogglableButton;
