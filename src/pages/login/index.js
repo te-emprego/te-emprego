@@ -34,7 +34,7 @@ const Login = () => (
         <input type="text" placeholder="email" />
         <input type="password" placeholder="senha" />
         <button type="submit">
-          <MaterialIcon icon="arrow_forward" color={colors.darken} />
+          <MaterialIcon icon="arrow_forward" color={colors.primary} />
           <span>Entrar</span>
         </button>
       </form>

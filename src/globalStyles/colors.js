@@ -5,5 +5,5 @@ export default {
   darkText: '#646464',
   lightText: '#707070',
   shadowText: '#a1a1a1',
-  shadowBox: '#b2bec3',
+  shadowBox: 'rgba(0,0,0,.16)',
 };
