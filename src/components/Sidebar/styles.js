@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button } from '../TogglableButton/styles';
+import { Button } from '@components/TogglableButton/styles';
 
 const WidgetWrapper = styled.div`
   border-radius: 10px;

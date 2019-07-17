@@ -1,6 +1,6 @@
 import React from 'react';
 import MaterialIcon from 'material-icons-react';
-import JobDescription from '../JobDescription';
+import JobDescription from '@components/JobDescription';
 import {
   Wrapper,
   InfoContent,
