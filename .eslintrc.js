@@ -22,5 +22,6 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'autofix/no-unused-vars': 'error',
     'import/no-unresolved': 'off',
+    "no-console": "off",
   },
 };
