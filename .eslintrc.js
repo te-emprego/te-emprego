@@ -17,11 +17,11 @@ module.exports = {
   },
   plugins: ['react', 'prettier', 'autofix'],
   rules: {
-    'prettier/prettier': ['error', { "endOfLine": "auto" }],
+    'prettier/prettier': ['error', { 'endOfLine': 'auto }],
     'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.js'] }],
     'import/prefer-default-export': 'off',
     'autofix/no-unused-vars': 'error',
     'import/no-unresolved': 'off',
-    "no-console": "off",
+    'no-console': 'off',
   },
 };
