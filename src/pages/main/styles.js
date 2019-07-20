@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-  width: 1340px;
+  width: 100%;
   margin: auto;
 `;
 
@@ -11,6 +11,12 @@ export const MainContainer = styled(Container)`
 
   > div:first-child {
     width: 990px;
+    @media (min-width: 481px) and (max-width: 767px) {
+      width: 100%;
+    }
+    @media (min-width: 320px) and (max-width: 480px) {
+      width: 100%;
+    }
   }
   > div:last-child {
     width: 320px;

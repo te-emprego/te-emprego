@@ -12,6 +12,13 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
-const Logo = styled.img``;
+const Logo = styled.img`
+  @media (min-width: 481px) and (max-width: 767px) {
+    width: 100%;
+  }
+  @media (min-width: 320px) and (max-width: 480px) {
+    width: 100%;
+  }
+`;
 
 export { Container, Wrapper, Logo };
