@@ -21,6 +21,12 @@ export const MainContainer = styled(Container)`
   }
   > div:last-child {
     width: 320px;
+    @media (min-width: 320px) and (max-width: 767px) {
+      position: fixed;
+      top: 30%;
+      right: 0;
+      display: none;
+    }
   }
 `;
 
@@ -30,7 +36,8 @@ const WidgetWrapper = styled.div`
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   padding: 20px;
   @media (min-width: 320px) and (max-width: 767px) {
-    padding: 5px;
+    padding: 10px;
+    background-color: #f5f5f5;
   }
 `;
 

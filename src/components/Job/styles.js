@@ -49,12 +49,17 @@ const FeatureList = styled.div`
   @media (min-width: 320px) and (max-width: 767px) {
     position: relative;
     width: 100%;
-    border-top-right-radius: 0px;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    justify-content: flex-end;
   }
 `;
 
 const Feature = styled.div`
   width: 100%;
+  @media (min-width: 320px) and (max-width: 767px) {
+    width: 50%;
+  }
 `;
 
 const FeatureTitle = styled.div`
@@ -83,6 +88,9 @@ const Wrapper = styled.div`
   }
   &:not(:last-child) {
     margin-bottom: 20px;
+    @media (min-width: 320px) and (max-width: 767px) {
+      background-color: #ffffff;
+    }
   }
 
   &:hover {
@@ -101,6 +109,10 @@ const RemoteBadge = styled.div`
   font-weight: 700;
   font-size: 15px;
   user-select: none;
+  @media (min-width: 320px) and (max-width: 767px) {
+    padding: 10px;
+    margin-top: 20px;
+  }
 `;
 
 const LowSalaryText = styled.div`
