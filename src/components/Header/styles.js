@@ -13,9 +13,7 @@ const Wrapper = styled.div`
 `;
 
 const Logo = styled.img`
-  @media (min-width: 320px) and (max-width: 767px) {
-    width: 100%;
-  }
+  width: 100%;
 `;
 
 export { Container, Wrapper, Logo };
