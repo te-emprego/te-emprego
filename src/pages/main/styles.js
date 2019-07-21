@@ -8,13 +8,14 @@ const Container = styled.div`
 export const MainContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
-
+  @media (min-width: 320px) and (max-width: 767px) {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    display: block;
+  }
   > div:first-child {
     width: 990px;
-    @media (min-width: 481px) and (max-width: 767px) {
-      width: 100%;
-    }
-    @media (min-width: 320px) and (max-width: 480px) {
+    @media (min-width: 320px) and (max-width: 767px) {
       width: 100%;
     }
   }
@@ -28,6 +29,9 @@ const WidgetWrapper = styled.div`
   background-color: #ffffff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   padding: 20px;
+  @media (min-width: 320px) and (max-width: 767px) {
+    padding: 5px;
+  }
 `;
 
 export const MainWrapper = WidgetWrapper;

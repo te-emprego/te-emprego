@@ -4,6 +4,11 @@ const Wrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  @media (min-width: 320px) and (max-width: 767px) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
 `;
 
 const CompanyWrapper = styled.div`
