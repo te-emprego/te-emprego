@@ -2,9 +2,8 @@ import styled from 'styled-components';
 
 const InfoContent = styled.div`
   width: 445px;
-  @media (min-width: 320px) and (max-width: 767px) {
+  @media (max-width: 767px) {
     padding: 10px;
-    width: 100%;
   }
 `;
 
@@ -25,10 +24,6 @@ const InfoDescription = styled.span`
 
 const EmployerContent = styled.div`
   width: 180px;
-  @media (min-width: 320px) and (max-width: 767px) {
-    width: 100%;
-    padding: 10px;
-  }
 `;
 
 const FeatureList = styled.div`
@@ -46,19 +41,16 @@ const FeatureList = styled.div`
   flex-wrap: wrap;
   align-content: space-between;
   transition: 0.25s ease;
-  @media (min-width: 320px) and (max-width: 767px) {
+  @media (max-width: 767px) {
     position: relative;
     width: 100%;
     border-radius: 0px 0px 10px 10px;
-    display: flex;
-    justify-content: flex-end;
   }
 `;
 
 const Feature = styled.div`
-  width: 100%;
   @media (min-width: 320px) and (max-width: 767px) {
-    width: 50%;
+    padding: 10px;
   }
 `;
 

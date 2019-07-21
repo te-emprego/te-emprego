@@ -14,7 +14,7 @@ export default createGlobalStyle`
     overflow-x: hidden;
     width:100%;
   }
-
+  
   body {
     font-family: "Nunito", cursive, sans-serif;
     -webkit-font-smoothing: antialiased !important;
