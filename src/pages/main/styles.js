@@ -9,14 +9,13 @@ export const MainContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   @media (min-width: 320px) and (max-width: 767px) {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
     display: block;
   }
   > div:first-child {
     width: 990px;
     @media (min-width: 320px) and (max-width: 767px) {
       width: 100%;
+      border-radius: 0;
     }
   }
   > div:last-child {
