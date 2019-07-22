@@ -15,9 +15,6 @@ export const MainBackground = styled.div`
 export const MainContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
-  background-image: url(${background});
-  background-repeat: no-repeat;
-  background-position: center top;
 
   > div:first-child {
     width: 990px;
