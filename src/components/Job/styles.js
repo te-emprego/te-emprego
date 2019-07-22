@@ -109,7 +109,6 @@ const RemoteBadge = styled.div`
   user-select: none;
   @media ${device.mobileLg} {
     padding: 10px;
-    margin-top: 20px;
     position: absolute;
     right: 0;
     margin-right: 20px;
