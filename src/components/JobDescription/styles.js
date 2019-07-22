@@ -4,9 +4,6 @@ const Wrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  @media (max-width: 767px) {
-    padding: 10px;
-  }
 `;
 
 const CompanyWrapper = styled.div`

@@ -114,6 +114,7 @@ export const SocialLinks = styled.div`
 
   @media screen and (max-width: 748px) {
     margin-bottom: 20px;
+    padding: 20px;
   }
 
   p {

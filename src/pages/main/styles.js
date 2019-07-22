@@ -36,6 +36,7 @@ const WidgetWrapper = styled.div`
   padding: 20px;
   @media (max-width: 767px) {
     background-color: transparent;
+    padding: 1.5rem;
   }
 `;
 

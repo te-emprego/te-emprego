@@ -3,6 +3,10 @@ import styled from 'styled-components';
 const Container = styled.div`
   width: 1340px;
   margin: auto;
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -12,8 +16,6 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
-const Logo = styled.img`
-  width: 100%;
-`;
+const Logo = styled.img``;
 
 export { Container, Wrapper, Logo };

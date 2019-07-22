@@ -3,7 +3,8 @@ import styled from 'styled-components';
 const InfoContent = styled.div`
   width: 445px;
   @media (max-width: 767px) {
-    padding: 10px;
+    padding: 20px;
+    width: 100%;
   }
 `;
 
@@ -24,6 +25,9 @@ const InfoDescription = styled.span`
 
 const EmployerContent = styled.div`
   width: 180px;
+  @media (max-width: 767px) {
+    padding: 20px;
+  }
 `;
 
 const FeatureList = styled.div`
@@ -49,8 +53,9 @@ const FeatureList = styled.div`
 `;
 
 const Feature = styled.div`
-  @media (min-width: 320px) and (max-width: 767px) {
-    padding: 10px;
+  @media (max-width: 767px) {
+    padding-bottom: 20px;
+    width: 100%;
   }
 `;
 
@@ -74,13 +79,13 @@ const Wrapper = styled.div`
   display: flex;
   transition: 0.25s ease;
   min-height: 150px;
-  @media (min-width: 320px) and (max-width: 767px) {
+  @media (max-width: 767px) {
     display: block;
-    padding: 0;
+    padding: 0px;
   }
   &:not(:last-child) {
     margin-bottom: 20px;
-    @media (min-width: 320px) and (max-width: 767px) {
+    @media (max-width: 767px) {
       background-color: #ffffff;
     }
   }
@@ -101,9 +106,12 @@ const RemoteBadge = styled.div`
   font-weight: 700;
   font-size: 15px;
   user-select: none;
-  @media (min-width: 320px) and (max-width: 767px) {
+  @media (max-width: 767px) {
     padding: 10px;
     margin-top: 20px;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
   }
 `;
 
