@@ -8,6 +8,7 @@
       "@config/*": ["./config/*"],
       "@pages/*": ["./pages/*"],
       "@images/*": ["./assets/images/*"],
+      "@store/*": ["./store/*"],
       "@/*": ["./*"]
     }
   },
