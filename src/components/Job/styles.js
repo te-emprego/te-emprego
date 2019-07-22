@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { device } from '@/globalStyles/media';
 
 const InfoContent = styled.div`
   width: 445px;
-  @media (max-width: 767px) {
+  @media ${device.mobileLg} {
     padding: 20px;
     width: 100%;
   }
@@ -25,7 +26,7 @@ const InfoDescription = styled.span`
 
 const EmployerContent = styled.div`
   width: 180px;
-  @media (max-width: 767px) {
+  @media ${device.mobileLg} {
     padding: 20px;
   }
 `;
@@ -45,7 +46,7 @@ const FeatureList = styled.div`
   flex-wrap: wrap;
   align-content: space-between;
   transition: 0.25s ease;
-  @media (max-width: 767px) {
+  @media ${device.mobileLg} {
     position: relative;
     width: 100%;
     border-radius: 0px 0px 10px 10px;
@@ -53,7 +54,7 @@ const FeatureList = styled.div`
 `;
 
 const Feature = styled.div`
-  @media (max-width: 767px) {
+  @media ${device.mobileLg} {
     padding-bottom: 20px;
     width: 100%;
   }
@@ -79,13 +80,13 @@ const Wrapper = styled.div`
   display: flex;
   transition: 0.25s ease;
   min-height: 150px;
-  @media (max-width: 767px) {
+  @media ${device.mobileLg} {
     display: block;
     padding: 0px;
   }
   &:not(:last-child) {
     margin-bottom: 20px;
-    @media (max-width: 767px) {
+    @media ${device.mobileLg} {
       background-color: #ffffff;
     }
   }
@@ -106,7 +107,7 @@ const RemoteBadge = styled.div`
   font-weight: 700;
   font-size: 15px;
   user-select: none;
-  @media (max-width: 767px) {
+  @media ${device.mobileLg} {
     padding: 10px;
     margin-top: 20px;
     position: absolute;

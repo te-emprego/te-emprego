@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '@/globalStyles/media';
 
 const Container = styled.div`
   width: 100%;
@@ -8,19 +9,19 @@ const Container = styled.div`
 export const MainContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
-  @media (max-width: 767px) {
+  @media ${device.mobileLg} {
     display: block;
   }
   > div:first-child {
     width: 990px;
-    @media (max-width: 767px) {
+    @media ${device.mobileLg} {
       width: 100%;
       border-radius: 0;
     }
   }
   > div:last-child {
     width: 320px;
-    @media (max-width: 767px) {
+    @media ${device.mobileLg} {
       position: fixed;
       top: 30%;
       right: 0;
@@ -34,7 +35,7 @@ const WidgetWrapper = styled.div`
   background-color: #ffffff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   padding: 20px;
-  @media (max-width: 767px) {
+  @media ${device.mobileLg} {
     background-color: transparent;
     padding: 1.5rem;
   }

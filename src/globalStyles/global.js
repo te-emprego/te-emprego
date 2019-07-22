@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import background from '../assets/images/background.svg';
+import { device } from './media';
 
 export default createGlobalStyle`
   * {
@@ -11,7 +12,7 @@ export default createGlobalStyle`
 
   html,body, #root {
     min-height: 100%;
-    @media (max-width: 767px) {
+    @media ${device.mobileLg} {
       overflow-x: hidden;
       width:100%;
     }

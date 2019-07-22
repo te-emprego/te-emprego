@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { device } from '@/globalStyles/media';
 
 const Container = styled.div`
   width: 1340px;
   margin: auto;
-  @media (max-width: 767px) {
+  @media ${device.mobileLg} {
     display: flex;
     justify-content: center;
   }
