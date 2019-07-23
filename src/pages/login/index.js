@@ -1,5 +1,6 @@
 import React from 'react';
 import MaterialIcon from 'material-icons-react';
+import { Link } from 'react-router-dom';
 
 import logo from '@images/Logo.svg';
 import right from '@images/fx.svg';
@@ -9,14 +10,10 @@ import github from '@images/github.svg';
 
 import colors from '@/globalStyles/colors';
 
-import {
-  Root,
-  HeaderLogin,
-  RightEffect,
-  LoginForm,
-  SocialLinks,
-  BottomEffect,
-} from './styles';
+import { RightEffect, BottomEffect } from '@/globalStyles/effects';
+import { Input } from '@/globalStyles/input';
+
+import { Root, HeaderLogin, LoginForm, SocialLinks } from './styles';
 
 const Login = () => (
   <Root>
@@ -32,8 +29,8 @@ const Login = () => (
       <p>Bem-vindo novamente! </p>
 
       <form>
-        <input type="text" placeholder="email" />
-        <input type="password" placeholder="senha" />
+        <Input type="text" placeholder="email" />
+        <Input type="password" placeholder="senha" />
         <button type="submit">
           <MaterialIcon icon="arrow_forward" color={colors.primary} />
           <span>Entrar</span>
@@ -57,7 +54,10 @@ const Login = () => (
     </SocialLinks>
 
     <p>
-      Não tem uma conta? <a href="/">Crie uma</a>
+      Não tem uma conta?
+      <Link to="/welcome">
+        <span> Crie uma</span>
+      </Link>
     </p>
 
     <BottomEffect>
