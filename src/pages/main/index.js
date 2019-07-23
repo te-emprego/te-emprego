@@ -4,17 +4,19 @@ import Header from '@components/Header';
 import Sidebar from '@components/Sidebar';
 import JobList from '@components/JobList';
 
-import { MainContainer, MainWrapper } from './styles';
+import { MainBackground, MainContainer, MainWrapper } from './styles';
 
 const Main = () => (
   <>
-    <Header />
-    <MainContainer>
-      <MainWrapper>
-        <JobList />
-      </MainWrapper>
-      <Sidebar />
-    </MainContainer>
+    <MainBackground>
+      <Header />
+      <MainContainer>
+        <MainWrapper>
+          <JobList />
+        </MainWrapper>
+        <Sidebar />
+      </MainContainer>
+    </MainBackground>
   </>
 );
 

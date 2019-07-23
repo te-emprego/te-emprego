@@ -1,8 +1,15 @@
 import styled from 'styled-components';
+import background from '@images/background.svg';
 
 const Container = styled.div`
   width: 1340px;
   margin: auto;
+`;
+
+export const MainBackground = styled.div`
+  background-image: url(${background});
+  background-repeat: no-repeat;
+  background-position: center top;
 `;
 
 export const MainContainer = styled(Container)`

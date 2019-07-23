@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import background from '../assets/images/background.svg';
 
 export default createGlobalStyle`
   * {
@@ -18,8 +17,5 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased !important;
     transition: .25s ease;
     min-height: 100%;
-    background-image: url(${background});
-    background-repeat: no-repeat;
-    background-position: center top;
   }
 `;
