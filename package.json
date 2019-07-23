@@ -25,6 +25,7 @@
     "eslint-plugin-jsx-a11y": "6.2.1",
     "eslint-plugin-react": "7.12.4",
     "eslint-plugin-react-hooks": "^1.5.0",
+    "express": "^4.17.1",
     "file-loader": "3.0.1",
     "fs-extra": "7.0.1",
     "html-webpack-plugin": "4.0.0-beta.5",
@@ -59,7 +60,6 @@
     "resolve": "1.10.0",
     "sass-loader": "7.1.0",
     "semver": "6.0.0",
-    "serve": "^11.1.0",
     "style-loader": "0.23.1",
     "styled-components": "^4.3.2",
     "terser-webpack-plugin": "1.2.3",
@@ -74,7 +74,7 @@
     "dev": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "start": "serve build"
+    "start": "node serve"
   },
   "eslintConfig": {
     "extends": "react-app"
