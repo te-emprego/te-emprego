@@ -5,8 +5,6 @@ import colors from '@/globalStyles/colors';
 export const Root = styled.div`
   background: linear-gradient(${colors.darken}, ${colors.primary});
   height: 100vh;
-  position: relative;
-  overflow: hidden;
   text-align: center;
 `;
 
@@ -15,7 +13,12 @@ export const HeaderLogin = styled.div`
   text-align: left;
 
   @media screen and (max-width: 748px) {
-    padding: 80px 25px 0;
+    padding: 0 25px 0;
+
+    img {
+      width: 200px;
+      height: 80px;
+    }
   }
 `;
 
