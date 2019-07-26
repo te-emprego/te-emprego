@@ -6,7 +6,7 @@ import bottom from '@images/fx_bottom.svg';
 
 import { RightEffect, BottomEffect } from '../../globalStyles/effects';
 
-import { Root, HeaderLogin, CenteredWrapper } from './styles';
+import { Root, HeaderLogin, CenteredWrapper, StyledLink } from './styles';
 
 const Welcome = () => (
   <Root>
@@ -22,8 +22,12 @@ const Welcome = () => (
       <p>Agora, escolha a opção que se enquadra melhor às suas expectativas.</p>
 
       <div>
-        <a href="/">quero publicar vagas</a>
-        <a href="/">quero procurar vagas</a>
+        <StyledLink to="/company-register">
+          <span>quero publicar vagas</span>
+        </StyledLink>
+        <StyledLink to="/user-register">
+          <span>quero publicar vagas</span>
+        </StyledLink>
       </div>
     </CenteredWrapper>
 

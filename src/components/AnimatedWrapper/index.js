@@ -8,7 +8,7 @@ import Welcome from '@pages/welcome';
 
 import { Wrapper } from './styles';
 
-function MainWrapper({ location }) {
+function AnimatedWrapper({ location }) {
   return (
     <Wrapper>
       <TransitionGroup className="transition-group">
@@ -29,8 +29,10 @@ function MainWrapper({ location }) {
   );
 }
 
-MainWrapper.propTypes = {
-  location: PropTypes.string.isRequired,
+AnimatedWrapper.propTypes = {
+  location: PropTypes.shape({
+    key: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
-export default withRouter(MainWrapper);
+export default withRouter(AnimatedWrapper);

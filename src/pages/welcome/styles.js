@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import colors from '@/globalStyles/colors';
 
@@ -54,22 +55,23 @@ export const CenteredWrapper = styled.div`
   div {
     display: flex;
     flex-direction: column;
-    a {
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-family: 'Raleway', sans-serif;
-      &:first-child {
-        padding: 24px 36px;
-        background: ${colors.white};
-        border-radius: 5px;
-        color: ${colors.primary};
-        margin: 20px 0;
-      }
-      &:last-child {
-        margin-top: 16px;
-        color: ${colors.white};
-      }
-    }
+  }
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  &:first-child {
+    padding: 24px 36px;
+    background: ${colors.white};
+    border-radius: 5px;
+    color: ${colors.primary};
+    margin: 20px 0;
+  }
+  &:last-child {
+    margin-top: 16px;
+    color: ${colors.white};
   }
 `;
