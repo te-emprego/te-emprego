@@ -6,6 +6,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import Main from '@pages/main';
 import Login from '@pages/login';
 import Welcome from '@pages/welcome';
+import Company from '@pages/company-register';
 
 import '@store/config/reactotron';
 import store from '@store';
@@ -30,6 +31,7 @@ const App = () => (
                   <Route path="/" component={Main} exact />
                   <Route path="/login" component={Login} />
                   <Route path="/welcome" component={Welcome} />
+                  <Route path="/company-register" component={Company} />
                 </Switch>
               </CSSTransition>
             </TransitionGroup>

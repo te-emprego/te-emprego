@@ -9,6 +9,16 @@ export const RightEffect = styled.div`
   }
 `;
 
+export const LeftEffect = styled.div`
+  img {
+    position: absolute;
+    top: 0;
+    left: -65px;
+    width: 53%;
+    transform: rotate(270deg);
+  }
+`;
+
 export const BottomEffect = styled.div`
   width: 100%;
   margin: 0 auto;
