@@ -1,12 +1,11 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import colors from '@/globalStyles/colors';
 
 export const Root = styled.div`
   background: linear-gradient(${colors.darken}, ${colors.primary});
   height: 100vh;
-  position: relative;
-  overflow: hidden;
   text-align: center;
 `;
 
@@ -15,7 +14,12 @@ export const HeaderLogin = styled.div`
   text-align: left;
 
   @media screen and (max-width: 748px) {
-    padding: 80px 25px 0;
+    padding: 0 25px 0;
+
+    img {
+      width: 200px;
+      height: 80px;
+    }
   }
 `;
 
@@ -51,22 +55,23 @@ export const CenteredWrapper = styled.div`
   div {
     display: flex;
     flex-direction: column;
-    a {
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-family: 'Raleway', sans-serif;
-      &:first-child {
-        padding: 24px 36px;
-        background: ${colors.white};
-        border-radius: 5px;
-        color: ${colors.primary};
-        margin: 20px 0;
-      }
-      &:last-child {
-        margin-top: 16px;
-        color: ${colors.white};
-      }
-    }
+  }
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  &:first-child {
+    padding: 24px 36px;
+    background: ${colors.white};
+    border-radius: 5px;
+    color: ${colors.primary};
+    margin: 20px 0;
+  }
+  &:last-child {
+    margin-top: 16px;
+    color: ${colors.white};
   }
 `;
