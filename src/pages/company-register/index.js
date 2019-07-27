@@ -15,6 +15,7 @@ import {
   InsideWrapper,
   RegisterWrapper,
   Form,
+  Inputs,
   StyledInput,
   Button,
   SocialLinks,
@@ -22,10 +23,10 @@ import {
 
 const CompanyRegister = () => (
   <Root>
-    <HeaderLogin>
+    <HeaderLogin mobile>
       <img src={logo} alt="Logo Te Emprego" />
     </HeaderLogin>
-    <LeftEffect>
+    <LeftEffect mobile>
       <img src={left} alt="left effect" />
     </LeftEffect>
 
@@ -36,29 +37,31 @@ const CompanyRegister = () => (
 
         <RegisterWrapper>
           <Form>
-            <div>
-              <StyledInput type="text" placeholder="email" />
-              <StyledInput type="password" placeholder="senha" />
-              <StyledInput type="text" placeholder="nome da empresa" />
-              <StyledInput type="text" placeholder="telefone" />
-            </div>
+            <Inputs>
+              <div>
+                <StyledInput type="text" placeholder="email" />
+                <StyledInput type="password" placeholder="senha" />
+                <StyledInput type="text" placeholder="nome da empresa" />
+                <StyledInput type="text" placeholder="telefone" />
+              </div>
 
+              <div>
+                <StyledInput type="text" placeholder="categoria da empresa" />
+                <StyledInput type="text" placeholder="tamanho da empresa" />
+                <StyledInput
+                  type="file"
+                  id="file"
+                  placeholder="imagem de perfil"
+                />
+                <StyledInput type="text" placeholder="resumo da empresa" />
+              </div>
+            </Inputs>
             <div>
-              <StyledInput type="text" placeholder="categoria da empresa" />
-              <StyledInput type="text" placeholder="tamanho da empresa" />
-              <StyledInput
-                type="file"
-                id="file"
-                placeholder="imagem de perfil"
-              />
-              <StyledInput type="text" placeholder="resumo da empresa" />
+              <Button type="submit">Cadastrar</Button>
+              <p>Ao clicar no botão acima, você declara que aceita os nossos</p>
+              <a>Termos de Uso e Política de Privacidade</a>
             </div>
           </Form>
-          <div>
-            <Button type="submit">Cadastrar</Button>
-            <p>Ao clicar no botão acima, você declara que aceita os nossos</p>
-            <a>Termos de Uso e Política de Privacidade</a>
-          </div>
         </RegisterWrapper>
 
         <SocialLinks>
@@ -77,7 +80,7 @@ const CompanyRegister = () => (
       </InsideWrapper>
     </Wrapper>
 
-    <BottomEffect>
+    <BottomEffect register>
       <img src={bottom} alt="bottom effect" />
     </BottomEffect>
   </Root>

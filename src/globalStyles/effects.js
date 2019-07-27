@@ -17,6 +17,10 @@ export const LeftEffect = styled.div`
     width: 53%;
     transform: rotate(270deg);
   }
+
+  @media screen and (max-width: 748px) {
+    display: none;
+  }
 `;
 
 export const BottomEffect = styled.div`
@@ -31,8 +35,9 @@ export const BottomEffect = styled.div`
   @media screen and (max-width: 748px) {
     img {
       width: 280px;
-      position: absolute;
+      position: ${props => (props.register ? 'inherit' : 'absolute')};
       bottom: 0;
+      margin-bottom: ${props => (props.register ? '-20px' : '0')};
       left: calc(50% - 140px);
     }
   }

@@ -9,6 +9,11 @@ export const Root = styled.div`
   position: relative;
   overflow: hidden;
   text-align: center;
+
+  @media screen and (max-width: 748px) {
+    overflow: scroll;
+    position: inherit;
+  }
 `;
 
 export const HeaderLogin = styled.div`
@@ -22,7 +27,21 @@ export const HeaderLogin = styled.div`
   }
 
   @media screen and (max-width: 748px) {
-    padding: 80px 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px 0;
+    background: ${props =>
+      props.mobile
+        ? `linear-gradient(${colors.darken}, ${colors.primary})`
+        : 'inherit'};
+    border-radius: ${props =>
+        props.mobile ? '0px 0px 120px 120px' : 'inherit'}
+      img {
+      margin-top: -20px;
+      width: 250px;
+      height: 50px;
+    }
   }
 `;
 
@@ -33,8 +52,9 @@ export const Wrapper = styled.div`
   align-items: center;
 
   @media screen and (max-width: 748px) {
-    margin-top: 50px;
-    padding: 30px;
+    margin: 0;
+    width: 100%;
+    display: block;
   }
 `;
 
@@ -48,6 +68,13 @@ export const InsideWrapper = styled.div`
 
   @media screen and (max-width: 1366px) {
     margin: 50px 0 0 200px;
+  }
+
+  @media screen and (max-width: 748px) {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   h1,
@@ -72,10 +99,40 @@ export const RegisterWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
+  @media screen and (max-width: 748px) {
+    margin: 20px;
+  }
+`;
+
+export const Form = styled.form`
+  margin-left: -30px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media screen and (max-width: 748px) {
+    display: block;
+    height: 100%;
+    margin: auto;
+  }
+
+  div {
+    width: 100%;
+    padding: 0 10px;
+
+    @media screen and (max-width: 748px) {
+      flex-direction: column;
+    }
+  }
+
   > div:last-child {
-    align-self: flex-end;
     text-align: right;
-    margin-right: 60px;
+
+    @media screen and (max-width: 748px) {
+      margin: 0;
+      text-align: center;
+      align-self: inherit;
+    }
 
     p {
       color: ${colors.shadowText};
@@ -90,20 +147,14 @@ export const RegisterWrapper = styled.div`
   }
 `;
 
-export const Form = styled.form`
-  margin-left: -30px;
+export const Inputs = styled.div`
   display: flex;
-  width: 100%;
-
-  div {
-    width: 50%;
-  }
 `;
 
 export const StyledInput = styled(Input)`
   color: ${colors.darken};
   border-bottom: 1px solid ${colors.darken};
-  width: 90%;
+  width: 100%;
 
   &::placeholder {
     color: ${colors.darken};
@@ -130,7 +181,7 @@ export const SocialLinks = styled.div`
   margin: -70px 0;
 
   @media screen and (max-width: 748px) {
-    margin-bottom: 20px;
+    margin: 10px 0;
   }
 
   p {
