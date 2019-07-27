@@ -1,7 +1,7 @@
 import React from 'react';
 
 import logo from '@images/Logo.svg';
-import right from '@images/fx_purple.svg';
+import left from '@images/fx_purple.svg';
 import bottom from '@images/fx_bottom_purple.svg';
 import linkedin from '@images/linkedin.svg';
 import github from '@images/github_white.svg';
@@ -26,7 +26,7 @@ const CompanyRegister = () => (
       <img src={logo} alt="Logo Te Emprego" />
     </HeaderLogin>
     <LeftEffect>
-      <img src={right} alt="right effect" />
+      <img src={left} alt="left effect" />
     </LeftEffect>
 
     <Wrapper>
