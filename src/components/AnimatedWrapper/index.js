@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 import Login from '@pages/login';
 import Welcome from '@pages/welcome';
+import Company from '@pages/company-register';
 
 import { Wrapper } from './styles';
 
@@ -21,6 +22,7 @@ function AnimatedWrapper({ location }) {
             <Switch location={location}>
               <Route path="/login" component={Login} />
               <Route path="/welcome" component={Welcome} />
+              <Route path="/company-register" component={Company} />
             </Switch>
           </section>
         </CSSTransition>
