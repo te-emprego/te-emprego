@@ -7,6 +7,7 @@ import Login from '@pages/login';
 import Welcome from '@pages/welcome';
 import Company from '@pages/company-register';
 import User from '@pages/user-register';
+import Token from '@pages/token';
 
 import { Wrapper } from './styles';
 
@@ -25,6 +26,7 @@ function AnimatedWrapper({ location }) {
               <Route path="/welcome" component={Welcome} />
               <Route path="/company-register" component={Company} />
               <Route path="/user-register" component={User} />
+              <Route path="/token" component={Token} />
             </Switch>
           </section>
         </CSSTransition>
