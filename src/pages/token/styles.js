@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 import colors from '@/globalStyles/colors';
 
@@ -48,8 +47,8 @@ export const CenteredWrapper = styled.div`
   }
 
   p {
-    padding: 20px;
-    margin-top: 10px;
+    margin: 30px 0;
+    font-size: 1.5rem;
   }
 
   div {
@@ -58,20 +57,18 @@ export const CenteredWrapper = styled.div`
   }
 `;
 
-export const StyledLink = styled(Link)`
+export const TokenWrapper = styled.div`
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
-  font-family: 'Raleway', sans-serif;
-  &:first-child {
+  width: 350px;
+  align-self: center;
+
+  span {
     padding: 24px 36px;
     background: ${colors.white};
     border-radius: 5px;
     color: ${colors.primary};
-    margin: 20px 0;
-  }
-  &:last-child {
-    margin-top: 16px;
-    color: ${colors.white};
+    margin: 20px 0 40px 0;
   }
 `;

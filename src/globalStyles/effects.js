@@ -9,6 +9,20 @@ export const RightEffect = styled.div`
   }
 `;
 
+export const LeftEffect = styled.div`
+  img {
+    position: absolute;
+    top: 0;
+    left: -65px;
+    width: 53%;
+    transform: rotate(270deg);
+  }
+
+  @media screen and (max-width: 748px) {
+    display: none;
+  }
+`;
+
 export const BottomEffect = styled.div`
   width: 100%;
   margin: 0 auto;
@@ -21,8 +35,9 @@ export const BottomEffect = styled.div`
   @media screen and (max-width: 748px) {
     img {
       width: 280px;
-      position: absolute;
+      position: ${props => (props.register ? 'inherit' : 'absolute')};
       bottom: 0;
+      margin-bottom: ${props => (props.register ? '-20px' : '0')};
       left: calc(50% - 140px);
     }
   }

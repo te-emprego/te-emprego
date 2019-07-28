@@ -24,6 +24,8 @@ module.exports = {
     'import/no-unresolved': 'off',
     'no-console': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
-    'jsx-a11y/anchor-has-content': 'off'
+    'jsx-a11y/anchor-has-content': 'off',
+    'jsx-a11y/label-has-for': 'off',
+    'jsx-a11y/label-has-associated-control': 'off',
   }
 };

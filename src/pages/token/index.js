@@ -1,4 +1,5 @@
 import React from 'react';
+import MaterialIcon from 'material-icons-react';
 
 import logo from '@images/Logo.svg';
 import right from '@images/fx.svg';
@@ -6,9 +7,11 @@ import bottom from '@images/fx_bottom.svg';
 
 import { RightEffect, BottomEffect } from '../../globalStyles/effects';
 
-import { Root, HeaderLogin, CenteredWrapper, StyledLink } from './styles';
+import { Root, HeaderLogin, CenteredWrapper, TokenWrapper } from './styles';
 
-const Welcome = () => (
+import colors from '@/globalStyles/colors';
+
+const Token = () => (
   <Root>
     <HeaderLogin>
       <img src={logo} alt="Logo Te Emprego" />
@@ -18,17 +21,19 @@ const Welcome = () => (
     </RightEffect>
 
     <CenteredWrapper>
-      <h1>Que legal!</h1>
-      <p>Agora, escolha a opção que se enquadra melhor às suas expectativas.</p>
+      <h1>Pronto!</h1>
+      <p>
+        Agora olha lá na sua caixa de entrada, mandamos um email de confirmação
+        com um Token.
+      </p>
 
       <div>
-        <StyledLink to="/company-register">
-          <span>quero publicar vagas</span>
-        </StyledLink>
-        <StyledLink to="/user-register">
-          <span>quero procurar vagas</span>
-        </StyledLink>
+        <TokenWrapper>
+          <span>TEEMPREGO4564122ROCKS</span>
+        </TokenWrapper>
       </div>
+
+      <MaterialIcon icon="refresh" color={colors.white} size="50" />
     </CenteredWrapper>
 
     <BottomEffect>
@@ -37,4 +42,4 @@ const Welcome = () => (
   </Root>
 );
 
-export default Welcome;
+export default Token;
