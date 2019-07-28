@@ -1,4 +1,5 @@
 import React from 'react';
+import MaterialIcon from 'material-icons-react';
 
 import logo from '@images/Logo.svg';
 import left from '@images/fx_purple.svg';
@@ -20,6 +21,8 @@ import {
   Button,
   SocialLinks,
 } from './styles';
+
+import colors from '@/globalStyles/colors';
 
 const CompanyRegister = () => (
   <Root>
@@ -48,12 +51,16 @@ const CompanyRegister = () => (
               <div>
                 <StyledInput type="text" placeholder="categoria da empresa" />
                 <StyledInput type="text" placeholder="tamanho da empresa" />
-                <StyledInput
-                  type="file"
-                  id="file"
-                  placeholder="imagem de perfil"
-                />
                 <StyledInput type="text" placeholder="resumo da empresa" />
+                <label htmlFor="upload" id="file">
+                  <StyledInput
+                    type="file"
+                    id="upload"
+                    placeholder="imagem de perfil"
+                  />
+                  imagem do perfil
+                  <MaterialIcon icon="cloud_upload" color={colors.darken} />
+                </label>
               </div>
             </Inputs>
             <div>

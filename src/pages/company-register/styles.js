@@ -149,6 +149,30 @@ export const Form = styled.form`
 
 export const Inputs = styled.div`
   display: flex;
+
+  label {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    background: transparent;
+    display: table;
+    color: ${colors.darken};
+    font-size: 1.1rem;
+    border-bottom: 1px solid ${colors.darken};
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span {
+      vertical-align: middle;
+    }
+
+    input[type='file'] {
+      display: none;
+    }
+  }
 `;
 
 export const StyledInput = styled(Input)`
