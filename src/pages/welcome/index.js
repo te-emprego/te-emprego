@@ -26,7 +26,7 @@ const Welcome = () => (
           <span>quero publicar vagas</span>
         </StyledLink>
         <StyledLink to="/user-register">
-          <span>quero publicar vagas</span>
+          <span>quero procurar vagas</span>
         </StyledLink>
       </div>
     </CenteredWrapper>
