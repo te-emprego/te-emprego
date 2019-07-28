@@ -165,10 +165,6 @@ export const Inputs = styled.div`
     align-items: center;
     justify-content: space-between;
 
-    span {
-      vertical-align: middle;
-    }
-
     input[type='file'] {
       display: none;
     }
