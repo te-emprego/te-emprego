@@ -1,11 +1,9 @@
 import styled from 'styled-components';
-import colors from '../../globalStyles/colors';
+import colors from '@/globalStyles/colors';
 
 export const Root = styled.div`
   background: linear-gradient(${colors.darken}, ${colors.primary});
   height: 100vh;
-  position: relative;
-  overflow: hidden;
   text-align: center;
 
   p,
@@ -24,7 +22,12 @@ export const HeaderLogin = styled.div`
   text-align: left;
 
   @media screen and (max-width: 748px) {
-    padding: 80px 25px 0;
+    padding: 0 25px 0;
+
+    img {
+      width: 200px;
+      height: 80px;
+    }
   }
 `;
 
@@ -61,24 +64,6 @@ export const LoginForm = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    input {
-      width: 80%;
-      padding: 10px;
-      margin: 20px 0;
-      border: none;
-      border-bottom: 1px solid ${colors.white};
-      background: transparent;
-      outline: none;
-      color: ${colors.white};
-      font-family: 'Nunito', sans-serif;
-
-      &::placeholder {
-        color: ${colors.white};
-        font-family: 'Nunito', sans-serif;
-        font-size: 1.1rem;
-      }
-    }
 
     button {
       width: 80%;
@@ -145,34 +130,6 @@ export const SocialLinks = styled.div`
         margin: 0 3px 0 5px;
         color: ${colors.primary};
       }
-    }
-  }
-`;
-
-export const RightEffect = styled.div`
-  img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 35%;
-  }
-`;
-
-export const BottomEffect = styled.div`
-  width: 100%;
-  margin: 0 auto;
-  img {
-    position: absolute;
-    bottom: 0;
-    left: calc(50% - 250px);
-  }
-
-  @media screen and (max-width: 748px) {
-    img {
-      width: 280px;
-      position: absolute;
-      bottom: 0;
-      left: calc(50% - 140px);
     }
   }
 `;
