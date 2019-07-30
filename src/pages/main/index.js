@@ -1,20 +1,24 @@
 import React from 'react';
-
 import Header from '@components/Header';
 import Sidebar from '@components/Sidebar';
 import JobList from '@components/JobList';
-
-import { MainContainer, MainWrapper } from './styles';
+import { Col } from '@components/Grid';
+import { Container, WrapperSidebar } from './styles';
 
 const Main = () => (
   <>
     <Header />
-    <MainContainer>
-      <MainWrapper>
+    <Container>
+      <Col xs={12} sm={10} lg={7}>
         <JobList />
-      </MainWrapper>
-      <Sidebar />
-    </MainContainer>
+      </Col>
+
+      <WrapperSidebar>
+        <Col lg={3}>
+          <Sidebar />
+        </Col>
+      </WrapperSidebar>
+    </Container>
   </>
 );
 

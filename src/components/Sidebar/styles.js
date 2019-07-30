@@ -6,6 +6,7 @@ const WidgetWrapper = styled.div`
   background-color: #ffffff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   padding: 20px;
+  width: 22.5vw;
 `;
 
 const FiltersWrapper = styled(WidgetWrapper)`
@@ -17,7 +18,9 @@ const FiltersWrapper = styled(WidgetWrapper)`
   top: 30px;
 `;
 
-const SidebarWrapper = styled.div``;
+const SidebarWrapper = styled.div`
+  position: fixed;
+`;
 
 const ButtonsWrapper = styled.div`
   ${Button} {

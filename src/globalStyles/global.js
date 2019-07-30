@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import background from '../assets/images/background.svg';
+import colors from '@/globalStyles/colors';
 
 export default createGlobalStyle`
   * {
@@ -18,8 +18,23 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased !important;
     transition: .25s ease;
     min-height: 100%;
-    background-image: url(${background});
-    background-repeat: no-repeat;
-    background-position: center top;
+    background: linear-gradient(
+      to bottom left,
+      ${colors.darken},
+      ${colors.primary}
+    );
   }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track-piece {
+    background-color: white;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #673AB7;
+  }
+
 `;

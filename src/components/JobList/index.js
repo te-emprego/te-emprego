@@ -1,6 +1,5 @@
 import React from 'react';
 import Job from '@components/Job';
-import { Wrapper } from './styles';
 
 const FAKE_STORE = [
   {
@@ -207,7 +206,7 @@ const FAKE_STORE = [
 
 const JobList = () => {
   return (
-    <Wrapper>
+    <>
       {FAKE_STORE.map(job => (
         <Job
           key={job.info.id}
@@ -221,7 +220,7 @@ const JobList = () => {
           lowSalary={job.features.lowSalary}
         />
       ))}
-    </Wrapper>
+    </>
   );
 };
 

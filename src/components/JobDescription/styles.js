@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import colors from '@/globalStyles/colors';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -10,6 +11,7 @@ const CompanyWrapper = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 `;
 
 const CompanyLogo = styled.img`
@@ -21,20 +23,17 @@ const CompanyLogo = styled.img`
 `;
 
 const CompanyName = styled.p`
-  color: #000;
+  color: ${colors.darkText};
 `;
 
 const FeaturesList = styled.ul`
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
-  padding-left: 5px;
-`;
 
-const FeatureItem = styled.li`
-  width: 100%;
-  display: flex;
+  @media screen and (max-width: 576px) {
+    padding: 15px;
+  }
 `;
 
 const FeatureIcon = styled.div`
@@ -55,7 +54,6 @@ export {
   CompanyLogo,
   CompanyName,
   FeaturesList,
-  FeatureItem,
   FeatureIcon,
   FeatureText,
 };

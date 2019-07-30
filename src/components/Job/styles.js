@@ -1,8 +1,5 @@
 import styled from 'styled-components';
-
-const InfoContent = styled.div`
-  width: 445px;
-`;
+import colors from '@/globalStyles/colors';
 
 const InfoTitle = styled.p`
   font-size: 22px;
@@ -19,13 +16,13 @@ const InfoDescription = styled.span`
   font-family: 'Nunito', sans-serif;
 `;
 
-const EmployerContent = styled.div`
-  width: 180px;
-`;
-
 const FeatureList = styled.div`
   color: #ffffff;
-  background-color: #673ab7;
+  background: linear-gradient(
+    to bottom left,
+    ${colors.darken},
+    ${colors.primary}
+  );
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 15px 20px;
@@ -33,11 +30,17 @@ const FeatureList = styled.div`
   height: 100%;
   top: 0;
   right: 0;
-  width: 215px;
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
   transition: 0.25s ease;
+
+  @media screen and (max-width: 576px) {
+    justify-content: space-between;
+    position: relative;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+  }
 `;
 
 const Feature = styled.div`
@@ -55,10 +58,19 @@ const FeatureDescription = styled.div`
   font-weight: 700;
 `;
 
+const BoxDescription = styled.div`
+  display: flex;
+  background-color: white;
+  padding: 15px 0;
+
+  @media screen and (max-width: 576px) {
+    display: block;
+  }
+`;
+
 const Wrapper = styled.div`
-  padding: 20px;
+  background-color: white;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  width: 100%;
   border-radius: 10px;
   position: relative;
   display: flex;
@@ -71,8 +83,12 @@ const Wrapper = styled.div`
 
   &:hover {
     ${FeatureList} {
-      width: 230px;
+      margin-left: -1.2vw;
     }
+  }
+
+  @media screen and (max-width: 576px) {
+    display: block;
   }
 `;
 
@@ -88,7 +104,6 @@ const RemoteBadge = styled.div`
 `;
 
 const LowSalaryText = styled.div`
-  width: 280px;
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   padding: 10px;
@@ -111,18 +126,22 @@ const LowSalaryIcon = styled.div`
 `;
 
 const LowSalary = styled.div`
-  position: relative;
-  right: 0px;
+  position: absolute;
+  right: 0.6vw;
+  top: 20px;
   cursor: default;
+
+  @media screen and (max-width: 576px) {
+    top: 10px;
+  }
 `;
 
 export {
   Wrapper,
-  InfoContent,
   InfoTitle,
   InfoDescription,
-  EmployerContent,
   FeatureList,
+  BoxDescription,
   Feature,
   FeatureTitle,
   FeatureDescription,

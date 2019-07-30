@@ -1,42 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MaterialIcon from 'material-icons-react';
+import { Row } from '@components/Grid';
 import {
   Wrapper,
   CompanyWrapper,
   CompanyLogo,
   CompanyName,
   FeaturesList,
-  FeatureItem,
   FeatureIcon,
   FeatureText,
 } from './styles';
 
 const JobDescription = ({ employer, features }) => (
   <Wrapper>
-    <CompanyWrapper>
-      <CompanyLogo alt={employer.name} src={employer.logo} />
-      <CompanyName>{employer.name}</CompanyName>
-    </CompanyWrapper>
     <FeaturesList>
-      <FeatureItem>
+      <Row>
+        <CompanyWrapper>
+          <CompanyLogo alt={employer.name} src={employer.logo} />
+          <CompanyName>{employer.name}</CompanyName>
+        </CompanyWrapper>
+      </Row>
+      <Row>
         <FeatureIcon>
           <MaterialIcon icon="card_travel" color="#ACACAC" size={15} />
         </FeatureIcon>
         <FeatureText>{features.contract}</FeatureText>
-      </FeatureItem>
-      <FeatureItem>
+      </Row>
+      <Row>
         <FeatureIcon>
           <MaterialIcon icon="attach_money" color="#ACACAC" size={15} />
         </FeatureIcon>
         <FeatureText>{features.salary}</FeatureText>
-      </FeatureItem>
-      <FeatureItem>
+      </Row>
+      <Row>
         <FeatureIcon>
           <MaterialIcon icon="g_translate" color="#ACACAC" size={15} />
         </FeatureIcon>
         <FeatureText>{features.englishLevel}</FeatureText>
-      </FeatureItem>
+      </Row>
     </FeaturesList>
   </Wrapper>
 );
