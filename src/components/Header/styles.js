@@ -1,17 +1,20 @@
 import styled from 'styled-components';
 
-const Container = styled.div`
-  width: 1340px;
-  margin: auto;
-`;
-
 const Wrapper = styled.div`
   color: #ffffff;
-  height: 86px;
+  height: 140px;
   display: flex;
   align-items: center;
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 60px;
+    text-align: center;
+  }
 `;
 
-const Logo = styled.img``;
+const Logo = styled.img`
+  max-width: 100%;
+`;
 
-export { Container, Wrapper, Logo };
+export { Wrapper, Logo };

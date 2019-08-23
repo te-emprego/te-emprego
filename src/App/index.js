@@ -1,25 +1,20 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import AnimatedRoutes from '@components/AnimatedWrapper';
+import Routes from './Routes';
 
 import '@store/config/reactotron';
 import store from '@store';
-
-import Main from './pages/main';
 
 import GlobalStyle from '@/globalStyles/global';
 
 const App = () => (
   <Provider store={store}>
-    <>
+    <BrowserRouter>
       <GlobalStyle />
-      <BrowserRouter>
-        <Route exact path="/" component={Main} />
-        <AnimatedRoutes />
-      </BrowserRouter>
-    </>
+      <Routes />
+    </BrowserRouter>
   </Provider>
 );
 

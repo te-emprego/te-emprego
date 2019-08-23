@@ -7,8 +7,8 @@ const Button = styled.button`
   background-color: ${({ isActive }) =>
     isActive ? COLORS.primary : COLORS.white};
   color: ${({ isActive }) => (isActive ? COLORS.white : COLORS.primary)};
-  padding: 3px 15px;
-  font-size: 18px;
+  padding: 3px 10px;
+  font-size: 14px;
   font-family: 'Nunito', sans-serif;
   cursor: pointer;
   outline: none;

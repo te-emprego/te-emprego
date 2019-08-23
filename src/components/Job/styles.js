@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 const InfoContent = styled.div`
-  width: 445px;
+  width: 415px;
 `;
 
 const InfoTitle = styled.p`
-  font-size: 22px;
+  font-size: 18px;
   color: #646464;
   font-weight: 800;
   font-family: 'Nunito', sans-serif;
@@ -13,18 +13,23 @@ const InfoTitle = styled.p`
 `;
 
 const InfoDescription = styled.span`
-  font-size: 15px;
+  font-size: 14px;
   color: #707070;
-  line-height: 24px;
+  line-height: 20px;
   font-family: 'Nunito', sans-serif;
 `;
 
 const EmployerContent = styled.div`
-  width: 180px;
+  width: 150px;
+
+  @media screen and (max-width: 990px) {
+    margin-top: 20px;
+  }
 `;
 
 const FeatureList = styled.div`
   color: #ffffff;
+  background-image: linear-gradient(to top right, #673ab7, #8f54f8);
   background-color: #673ab7;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -33,11 +38,21 @@ const FeatureList = styled.div`
   height: 100%;
   top: 0;
   right: 0;
-  width: 215px;
+  width: 200px;
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
   transition: 0.25s ease;
+
+  @media screen and (max-width: 990px) {
+    position: relative;
+    width: calc(100% + 40px) !important;
+    /* margin: 20px -20px -20px; */
+    border-radius: 10px;
+    margin-top: 20px;
+    /* border-top-left-radius: 0;
+    border-top-right-radius: 0; */
+  }
 `;
 
 const Feature = styled.div`
@@ -56,6 +71,7 @@ const FeatureDescription = styled.div`
 `;
 
 const Wrapper = styled.div`
+  background-color: #fff;
   padding: 20px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   width: 100%;
@@ -63,15 +79,26 @@ const Wrapper = styled.div`
   position: relative;
   display: flex;
   transition: 0.25s ease;
-  min-height: 150px;
+  min-height: 140px;
+
+  @media screen and (max-width: 990px) {
+    flex-wrap: wrap;
+    border-radius: 12px;
+  }
 
   &:not(:last-child) {
     margin-bottom: 20px;
   }
 
+  /* fix white border bug in chrome */
+  border-bottom-right-radius: 13px;
+  border-top-right-radius: 13px;
+
   &:hover {
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.25);
+    position: relative;
     ${FeatureList} {
-      width: 230px;
+      width: 220px;
     }
   }
 `;
@@ -85,6 +112,10 @@ const RemoteBadge = styled.div`
   font-weight: 700;
   font-size: 15px;
   user-select: none;
+
+  i {
+    transform: translateY(2px);
+  }
 `;
 
 const LowSalaryText = styled.div`

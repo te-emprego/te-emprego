@@ -18,4 +18,31 @@ export default createGlobalStyle`
     transition: .25s ease;
     min-height: 100%;
   }
+
+  .route-section {
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+  }
+
+  .route-transition-enter {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: ease .5s;
+  }
+  .route-transition-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: ease .5s;
+  }
+  .route-transition-exit {
+    opacity: 1;
+    transform: translateX(0);
+    transition: ease .5s;
+  }
+  .route-transition-exit-active {
+    opacity: 0;
+    transform: translateX(50%);
+    transition: ease .5s;
+  }
 `;

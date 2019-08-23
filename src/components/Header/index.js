@@ -1,8 +1,10 @@
 import React from 'react';
 
-import logo from '@images/Logo.svg';
+import { Container } from '@sdk/grid';
 
-import { Container, Logo, Wrapper } from './styles';
+import logo from '@assets/images/Logo.svg';
+
+import { Logo, Wrapper } from './styles';
 
 const Header = () => (
   <Wrapper>
@@ -12,4 +14,5 @@ const Header = () => (
   </Wrapper>
 );
 
+export { Header };
 export default Header;

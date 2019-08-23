@@ -9,15 +9,22 @@ const WidgetWrapper = styled.div`
 `;
 
 const FiltersWrapper = styled(WidgetWrapper)`
-  height: 400px;
   font-family: 'Nunito', sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   color: #646464;
   position: sticky;
   top: 30px;
+
+  @media screen and (max-width: 1200px) {
+    display: flex;
+  }
 `;
 
-const SidebarWrapper = styled.div``;
+const SidebarWrapper = styled.div`
+  @media screen and (max-width: 990px) {
+    display: none;
+  }
+`;
 
 const ButtonsWrapper = styled.div`
   ${Button} {
@@ -31,8 +38,14 @@ const ButtonsWrapper = styled.div`
 `;
 
 const Block = styled.div`
-  &:not(:last-child) {
-    margin-bottom: 20px;
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    flex: 1;
   }
 `;
 

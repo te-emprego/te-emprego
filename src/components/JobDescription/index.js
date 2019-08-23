@@ -29,7 +29,9 @@ const JobDescription = ({ employer, features }) => (
         <FeatureIcon>
           <MaterialIcon icon="attach_money" color="#ACACAC" size={15} />
         </FeatureIcon>
-        <FeatureText>{features.salary}</FeatureText>
+        <FeatureText>
+          R$ <strong>{features.salary}</strong>
+        </FeatureText>
       </FeatureItem>
       <FeatureItem>
         <FeatureIcon>

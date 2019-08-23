@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+
 import { Button } from './styles';
 
 const TogglableButton = ({ text, changeValue, value }) => {
@@ -21,10 +21,10 @@ const TogglableButton = ({ text, changeValue, value }) => {
   );
 };
 
-TogglableButton.propTypes = {
-  text: PropTypes.string.isRequired,
-  changeValue: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired,
-};
+// TogglableButton.propTypes = {
+//   text: PropTypes.string.isRequired,
+//   changeValue: PropTypes.func.isRequired,
+//   value: PropTypes.string.isRequired,
+// };
 
 export default TogglableButton;

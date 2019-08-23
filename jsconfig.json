@@ -1,16 +1,20 @@
 {
   "compilerOptions": {
-    "target": "es2017",
-    "allowSyntheticDefaultImports": false,
+    "target": "ES6",
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
     "baseUrl": "./src",
     "paths": {
-      "@components/*": ["./components/*"],
-      "@config/*": ["./config/*"],
-      "@pages/*": ["./pages/*"],
-      "@images/*": ["./assets/images/*"],
-      "@store/*": ["./store/*"],
-      "@/*": ["./*"]
+      "@components/*": ["components/*"],
+      "@config": ["config/index.js"],
+      "@assets/*": ["assets/*"],
+      "@views/*": ["views/*"],
+      "@store/*": ["store/*"],
+      "@sdk/*": ["sdk/*"],
+      "@app/*": ["App/*"],
+      "@/*": ["*"]
     }
   },
-  "exclude": ["node_modules", "build"]
+  "exclude": ["node_modules"],
+  "include": ["./src/**/*"]
 }

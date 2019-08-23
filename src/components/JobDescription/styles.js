@@ -22,6 +22,7 @@ const CompanyLogo = styled.img`
 
 const CompanyName = styled.p`
   color: #000;
+  font-size: 15px;
 `;
 
 const FeaturesList = styled.ul`
@@ -44,7 +45,7 @@ const FeatureIcon = styled.div`
 `;
 
 const FeatureText = styled.p`
-  font-size: 15px;
+  font-size: 13px;
   font-family: 'Nunito', sans-serif;
   color: #646464;
 `;
