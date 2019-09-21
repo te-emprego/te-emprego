@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { AppView } from '@sdk/body';
 import { Container, Row, Col } from '@sdk/grid';
 import { Sidebar, Job, Header } from '@components';
+import { Overlay } from '@components/Overlay';
 
 const FAKE_STORE = [
   {
@@ -258,6 +259,7 @@ const RowSystem = styled(Row)`
 const Jobs = () => (
   <AppView>
     <Header />
+    <Overlay />
     <Container>
       <RowSystem>
         <JobsList sizes={['xl-9']}>
