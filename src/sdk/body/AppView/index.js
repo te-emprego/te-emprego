@@ -7,6 +7,7 @@ import fx from '@assets/images/fx.svg';
 import fxBottom from '@assets/images/fx_bot.svg';
 
 import Sidebar from '@components/Sidebar/content';
+import { Overlay } from '@components/Overlay';
 
 import { Wrapper, Texture, Content, MobileMenu } from './style';
 
@@ -67,6 +68,9 @@ const AppView = ({ children }) => {
         src={fxBottom}
         alt="bottom fx"
       />
+      <span onClick={() => setSidebar(!sidebar)}>
+        <Overlay isActive={sidebar} />
+      </span>
     </Wrapper>
   );
 };
