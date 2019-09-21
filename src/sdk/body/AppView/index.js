@@ -62,7 +62,7 @@ const AppView = ({ children }) => {
       />
       <Texture />
       <Content>{children}</Content>
-      <imgfalse
+      <img
         onDragStart={e => e.preventDefault()}
         className="fx_bottom"
         src={fxBottom}
