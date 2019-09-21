@@ -5,8 +5,8 @@ export const OverlayWrapper = styled.div`
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  z-index: 100;
-  display: block;
+  z-index: 2;
+  display: ${({ isActive }) => (isActive ? 'block' : 'none')};
   position: fixed;
   top: 0;
   left: 0;

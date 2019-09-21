@@ -2,8 +2,8 @@ import React from 'react';
 
 import { OverlayWrapper } from './styles';
 
-const Overlay = () => {
-  return <OverlayWrapper className="eder" />;
+const Overlay = ({ isActive }) => {
+  return <OverlayWrapper isActive={isActive} />;
 };
 
 export { Overlay };
