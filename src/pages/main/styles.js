@@ -31,4 +31,12 @@ const WidgetWrapper = styled.div`
   padding: 20px;
 `;
 
+export const MainBackground = styled.div`
+  background-image: url(${background});
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 100%;
+`;
+
 export const MainWrapper = WidgetWrapper;
