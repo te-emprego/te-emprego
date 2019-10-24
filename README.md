@@ -6,6 +6,8 @@
 
 O Te Emprego é um projeto criado por [@danielbonifacio](https://github.com/danielbonifacio) que consiste em uma plataforma 100% gratuita e funcional para a procura e divulgação de qualquer tipo de emprego/serviço.
 
+Acesse o [Te emprego](https://teemprego.com.br "https://teemprego.com.br")
+
 ## Knowledge necessário para contribuir
 
 - ES6
